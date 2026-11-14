@@ -7,9 +7,6 @@ Authors@R:
            role = c("aut", "cre"),
            email = "weiyipeng@hsph.harvard.edu")
 Description: Contains public health datasets for a BST260 project.
-    The included data cover CDC mortality and outbreak records and
-    RAND information on state firearm legislation. The package supports
-    documented analyses and a project website built with pkgdown.
 Depends: R (>= 4.5.0)
 Imports: utils
 Suggests: knitr, testthat, rmarkdown, pkgdown, quarto
