@@ -1,1 +1,37 @@
+---
+title: "BST260 Final Project Proposal"
+author: "Weiyi Peng"
+date: "2026-11-18"
+format: html
+---
+#Vignette 1:
 
+What are some potential factors associated with systolic blood presures among US adults, and how might these factors influence the relationship between each of them and the systolic blood pressure?
+
+#Data source 1:
+
+NHANES dataset from the NHANES package. The study population will be people with age >= 20 with systolic blood presure recorded not as NA in this dataset
+
+#Variables and methods 1:
+
+The outcome variable is systolic blood presure which is BPSysAve in the dataset, measured in mm Hg. The main explanatory variables will be age, BMI, and participation in moderate or vigorous recreational physical activity. Other variables such as gender, race and ethinic group, diabetes will also be included as covariates. I will summarize the study population and plot systolic blood pressure against age, BMI, and box plot by physical activity participation to visualize individual relationship between main explainatory variables and predictors. Then a multi linear regression model will be fitted to estimate the associations with some interactions terms such as age by BMI and BMI by physical activity to see if these associations differ within different groups. I will check model assumptions using residual plots and report estimates with 95% confidence intervals.
+
+#Interpretation and limitation 1:
+
+The analysis will describe associations, not causal effects, because the data are cross-sectional. Other unmeasured factors, such as medication use, may affect the results. The package dataset was adapted for teaching, so findings should be presented as an educational analysis rather than definitive population estimates.
+
+#Vignette 2:
+
+How does the type of water exposure relate to the number of illnesses reported per waterborne disease outbreak in the United States?
+
+#Data source 2:
+
+CDC national outbreak reporting system data from waterborne object, accessible through(data(waterborne, package="finalproject"))
+
+#Variables and methods 2:
+
+The primary exposure will be water exposure type which is a categorical variable. And the outcome variable will be reported number of illnesses per outbreak. Other variable, such as year and geographic region will also be considered as adjustment variables. I will first perform preprocessing by examining NA and outliers, then summarize outbreak frequencies and illness counts across exposure categories, years, and regions to see if there is difference between groups. Then the temporal and geographical pattern will be visualized, and eventually poisson regression will be used to analyze the association between water exposure type and illnesses per outbreak, adjusting for year and region. I will also check for overdispersion to see if the use of negative binomial regression is necessary.
+
+#Interpretation and limitation 2:
+
+This will compare number of illnesses per outbreak across water exposure type. This will not be an analysis of individual risk of illness. It should be noted that outbreaks can be missing and not reported, all of which can affect the comparison. Thus the result should not be interpreted as causal effects.
